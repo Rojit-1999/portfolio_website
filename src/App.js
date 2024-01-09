@@ -26,8 +26,8 @@ function App() {
   return (
     <div  className="App ">
 
-      <div className="w-[56px] h-[40px] bg-[#FAFAFA] absolute left-0 top-[60px] rounded-[6px] justify-center items-center flex shadow-md shadow-[#ededed] hover:cursor-pointer ">
-        <IoSnowOutline className="text-[26px]   " />
+      <div className="w-[56px] h-[40px] bg-[#FAFAFA] absolute left-0 top-[60px] rounded-[6px] justify-center  items-center flex shadow-md shadow-[#ededed] hover:cursor-pointer ">
+        <IoSnowOutline className="text-[26px] animate-spin hover:animate-none  " />
       </div>
       <NavBar />
       <Hero />

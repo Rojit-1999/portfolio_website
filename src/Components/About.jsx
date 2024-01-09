@@ -14,31 +14,37 @@ import "react-circular-progressbar/dist/styles.css";
 
 function About() {
   return (
-    <div className="mx-[20px] py-[50px] flex flex-col justify-center items-center">
-      <div>
-        <img src={Aboutus} alt="" className="" />
-      </div>
-      <h1 className="font-[700] text-[26px]  mt-[28px]">About Me</h1>
-      <p className=" text-[14px] mt-[14px] text-center px-[20px]">
-        {" "}
-        Hello this is me Rojit Dhakal. I am very passionate about my work and I
-        believe that my intense designing, writing, and speaking skills and my
-        education make me highly competitive. I hope these are qualities you
-        look for in your work.
-      </p>
+    <div className="mx-[20px] py-[50px] sm:py-[60px] flex flex-col justify-center items-center">
+      <div className="sm:flex ">
+        <div>
+          <img src={Aboutus} alt="" className="sm:h-[400px] sm:w-[950px]" />
+        </div>
+        <div>
+          <h1 className="font-[700] text-[26px]  mt-[28px] text-center">
+            About Me
+          </h1>
+          <p className=" text-[14px] mt-[14px] text-center px-[20px]">
+            {" "}
+            Hello this is me Rojit Dhakal. I am very passionate about my work
+            and I believe that my intense designing, writing, and speaking
+            skills and my education make me highly competitive. I hope these are
+            qualities you look for in your work.
+          </p>
 
-      <div className="flex gap-[10px] flex-wrap  mt-[20px] items-center justify-center md:gap-[20px]">
-        {ability.map((list) => (
-          <div className="border-[1px] border-Secondary p-[8px] rounded-[10px]">
-            {list.Text}
+          <div className="flex gap-[10px] flex-wrap  mt-[20px] items-center justify-center ">
+            {ability.map((list) => (
+              <div className="border-[1px] border-Secondary p-[8px] rounded-[10px]">
+                {list.Text}
+              </div>
+            ))}
           </div>
-        ))}
+          <Reusablebtn
+            text={`Download CV`}
+            icon={<IoCloudDownload />}
+            className={"round font-[500] mx-auto "}
+          />
+        </div>
       </div>
-      <Reusablebtn
-        text={`Download CV`}
-        icon={<IoCloudDownload />}
-        className={"round font-[500]  "}
-      />
 
       {/* What I Do Section  */}
 
@@ -56,7 +62,7 @@ function About() {
           ))}
         </div>
       </div>
-      <div className="">
+      <div className="sm:flex  gap-[40px]">
         {/* Technical Skills Starts here */}
 
         <div className="py-[50px]  flex  flex-col gap-[20px] items-center">
@@ -95,43 +101,37 @@ function About() {
 
       <div className="py-[50px]  flex  flex-col gap-[20px] items-center text-Primary">
         <h1 className="text-[28px] font-[600]">Education</h1>
-        <div>
-          <div className="flex flex-col gap-[25px]">
-            {education.map((edu) => (
+        <div className="flex flex-col gap-[25px]">
+          {education.map((edu) => (
+            <div className="shadow-lg p-[20px] border-[#f1f1f1] border-[1px]">
+              <div className="text-[20px] font-[600] text-Secondary">
+                {edu.heading}
+              </div>
+              <div className="text-[16px] font-[500] mt-[8px] ">{edu.from}</div>
+              <div className="mt-[6px] text-[14px] font-[500]">{edu.date}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* work experience starts here */}
+
+        <div className="py-[50px]">
+          <h1 className="text-[28px] font-[600]">Work Experience</h1>
+          <div className="mt-[20px] flex flex-col gap-[25px]">
+            {experience.map((exp) => (
               <div className="shadow-lg p-[20px] border-[#f1f1f1] border-[1px]">
-                <div className="text-[20px] font-[600] text-Secondary">
-                  {edu.heading}
+                <div className="font-[600] text-[24px]  text-Secondary">
+                  {exp.heading}
                 </div>
-                <div className="text-[16px] font-[500] mt-[8px] ">
-                  {edu.from}
+                <div className="font-[500] text-[18px] mt-[10px]">
+                  {exp.from}
                 </div>
-                <div className="mt-[6px] text-[14px] font-[500]">
-                  {edu.date}
+
+                <div className="font-[500] text-[14px] mt-[10px]">
+                  {exp.date}
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* work experience starts here */}
-
-          <div className="py-[50px]">
-            <h1 className="text-[28px] font-[600]">Work Experience</h1>
-            <div className="mt-[20px] flex flex-col gap-[25px]">
-              {experience.map((exp) => (
-                <div className="shadow-lg p-[20px] border-[#f1f1f1] border-[1px]">
-                  <div className="font-[600] text-[24px]  text-Secondary">
-                    {exp.heading}
-                  </div>
-                  <div className="font-[500] text-[18px] mt-[10px]">
-                    {exp.from}
-                  </div>
-
-                  <div className="font-[500] text-[14px] mt-[10px]">
-                    {exp.date}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>

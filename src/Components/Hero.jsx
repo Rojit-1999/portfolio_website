@@ -7,8 +7,8 @@ import Reusablebtn from "./Reusablebtn";
 
 function Hero(text, icon) {
   return (
-    <div className="font-[500]  sm:px-[50px]">
-      <div className="  items-center sm:flex sm:flex-row-reverse gap-[50px] justify-center text-Primary sm:mt-[50px]">
+    <div className="font-[500]  sm:px-[50px] sm:py-[30px] animate-spin  hover:animate-none">
+      <div className="  items-center sm:flex sm:flex-row-reverse gap-[50px]   text-Primary sm:mt-[50px]">
         <div className="">
           
           <div className=" bg-[#e9e9e9] w-fit rounded-full p-[14px] m-auto">
@@ -29,9 +29,9 @@ function Hero(text, icon) {
           <div className=" flex flex-col items-center    mt-[14px] ">
             <h1 className="text-[40px]  font-[700] mt-[8px] sm:mt-0">Rojit Dhakal</h1>
           </div>
-          <div className="pt-[20px] ">
+          <div className="pt-[10px] ">
             {items.map((menu) => (
-              <div className="flex items-center gap-[20px] mt-[20px] sm:mt-[6px] ">
+              <div className="flex items-center gap-[20px] mt-[14px] ">
                 <div className="text-[20px] sm:text-[20px]">{menu.icon}</div>
                 <div className="font-[400] text-[16px] ">{menu.Text}</div>
               </div>
