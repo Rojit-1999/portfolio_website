@@ -7,7 +7,7 @@ import Reusablebtn from "./Reusablebtn";
 
 function Hero(text, icon) {
   return (
-    <div className="font-[500]  sm:px-[50px] sm:py-[30px] animate-spin  hover:animate-none">
+    <div className="font-[500]  sm:px-[50px] sm:py-[30px] ">
       <div className="  items-center sm:flex sm:flex-row-reverse gap-[50px]   text-Primary sm:mt-[50px]">
         <div className="">
           

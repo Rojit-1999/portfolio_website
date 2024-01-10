@@ -14,7 +14,7 @@ import "react-circular-progressbar/dist/styles.css";
 
 function About() {
   return (
-    <div className="mx-[20px] py-[50px] sm:py-[60px] flex flex-col justify-center items-center">
+    <div className=" py-[50px] sm:py-[60px] px-[20px] flex flex-col justify-center items-center">
       <div className="sm:flex ">
         <div>
           <img src={Aboutus} alt="" className="sm:h-[400px] sm:w-[950px]" />
@@ -62,7 +62,7 @@ function About() {
           ))}
         </div>
       </div>
-      <div className="sm:flex  gap-[40px]">
+      <div className="sm:flex  gap-[40px] ">
         {/* Technical Skills Starts here */}
 
         <div className="py-[50px]  flex  flex-col gap-[20px] items-center">
@@ -89,7 +89,7 @@ function About() {
               {professional.map((profess) => (
                 <div className="flex flex-col items-center justify-center ">
                   <div>{profess.bar}</div>
-                  <div className="">{profess.text}</div>
+                  <div className=" text-center">{profess.text}</div>
                 </div>
               ))}
             </div>
@@ -99,25 +99,31 @@ function About() {
 
       {/* Education Portion Starts from here */}
 
-      <div className="py-[50px]  flex  flex-col gap-[20px] items-center text-Primary">
-        <h1 className="text-[28px] font-[600]">Education</h1>
-        <div className="flex flex-col gap-[25px]">
-          {education.map((edu) => (
-            <div className="shadow-lg p-[20px] border-[#f1f1f1] border-[1px]">
-              <div className="text-[20px] font-[600] text-Secondary">
-                {edu.heading}
+      <div className="py-[50px] text-Primary  sm:grid sm:grid-cols-2 sm:gap-[26px] items-center">
+        <div>
+          <h1 className="text-[28px] font-[600]">Education</h1>
+          <div className="flex flex-col gap-[25px] mt-[20px]">
+            {education.map((edu) => (
+              <div className="shadow-lg p-[20px] border-[#f1f1f1] border-[1px]">
+                <div className="text-[20px] font-[600] text-Secondary">
+                  {edu.heading}
+                </div>
+                <div className="font-[500] text-[18px] mt-[10px] ">
+                  {edu.from}
+                </div>
+                <div className="mt-[6px] text-[14px] font-[500]">
+                  {edu.date}
+                </div>
               </div>
-              <div className="text-[16px] font-[500] mt-[8px] ">{edu.from}</div>
-              <div className="mt-[6px] text-[14px] font-[500]">{edu.date}</div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* work experience starts here */}
 
-        <div className="py-[50px]">
+        <div className="py-[50px] ">
           <h1 className="text-[28px] font-[600]">Work Experience</h1>
-          <div className="mt-[20px] flex flex-col gap-[25px]">
+          <div className="mt-[20px] flex flex-col gap-[25px] ">
             {experience.map((exp) => (
               <div className="shadow-lg p-[20px] border-[#f1f1f1] border-[1px]">
                 <div className="font-[600] text-[24px]  text-Secondary">
@@ -146,8 +152,8 @@ function About() {
       {/* contact section starts here */}
 
       <div>
-        <div className="">
-          <form action="" method="post" className=" flex flex-col gap-[20px] ">
+        <div className=" ">
+          <form action="" method="post" className=" flex flex-col gap-[20px]">
             <div className="">
               <input
                 type="text"
